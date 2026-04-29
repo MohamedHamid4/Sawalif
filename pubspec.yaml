@@ -1,0 +1,138 @@
+name: sawalif_app
+description: "Sawalif - Connect Easily & Securely"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # ===== Firebase =====
+  firebase_core: ^3.9.0
+  firebase_auth: ^5.3.4
+  cloud_firestore: ^5.5.4
+  # firebase_storage removed - using ImgBB (free) instead
+  firebase_messaging: ^15.1.6
+  firebase_database: ^11.3.0
+  google_sign_in: ^6.2.2
+
+  # ===== HTTP (for ImgBB image uploads) =====
+  http: ^1.2.0
+
+  # ===== URL launcher (Visit Website button on About page) =====
+  url_launcher: ^6.3.1
+
+  # ===== Push Notifications =====
+  onesignal_flutter: ^5.2.0
+
+  # ===== State Management =====
+  provider: ^6.1.2
+
+  # ===== UI & Images =====
+  cached_network_image: ^3.4.1
+  image_picker: ^1.1.2
+  shimmer: ^3.0.0
+
+  # ===== QR Code & Sharing =====
+  qr_flutter: ^4.1.0
+  mobile_scanner: ^5.0.0
+  share_plus: ^7.2.1
+
+  # ===== Animations =====
+  lottie: ^3.2.0
+  animations: ^2.0.11
+  flutter_staggered_animations: ^1.1.1
+  smooth_page_indicator: ^1.2.0+3
+
+  # ===== Fonts =====
+  google_fonts: ^6.2.1
+
+  # ===== Utils =====
+  intl: ^0.20.2
+  shared_preferences: ^2.3.4
+  flutter_local_notifications: ^18.0.1
+  uuid: ^4.5.1
+  permission_handler: ^11.3.1
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.1
+  flutter_native_splash: ^2.4.1
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/icon/
+    - assets/images/
+    - assets/animations/
+
+  fonts:
+    # ===== خط Cairo للعربي =====
+    # قم بتنزيل Cairo من Google Fonts ووضعه في assets/fonts/Cairo/
+    - family: Cairo
+      fonts:
+        - asset: assets/fonts/Cairo/Cairo-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Cairo/Cairo-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Cairo/Cairo-Bold.ttf
+          weight: 700
+
+    # ===== خط Poppins للإنجليزي =====
+    # قم بتنزيل Poppins من Google Fonts ووضعه في assets/fonts/Poppins/
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins/Poppins-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Poppins/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins/Poppins-Bold.ttf
+          weight: 700
+
+# ===== Launcher Icons =====
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/app_icon.png"
+  min_sdk_android: 21
+  remove_alpha_ios: true
+
+  # Android Adaptive Icon
+  adaptive_icon_background: "#FF6B35"
+  adaptive_icon_foreground: "assets/icon/app_icon_foreground.png"
+
+  # Disable other platforms
+  web:
+    generate: false
+  windows:
+    generate: false
+  macos:
+    generate: false
+
+# ===== Native Splash Screen =====
+flutter_native_splash:
+  color: "#FF6B35"
+  image: "assets/icon/app_icon_white.png"
+
+  # iOS
+  ios: true
+
+  # Dark mode (top-level)
+  color_dark: "#1A1A1A"
+  image_dark: "assets/icon/app_icon_white.png"
+
+  # Android 12+ specific (dark variants nested here)
+  android_12:
+    image: "assets/icon/app_icon_white.png"
+    icon_background_color: "#FF6B35"
+    image_dark: "assets/icon/app_icon_white.png"
+    icon_background_color_dark: "#1A1A1A"

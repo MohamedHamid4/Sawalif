@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(flutter clean *)",
+      "Bash(flutter pub *)",
+      "Bash(flutter --version)",
+      "Bash(flutter analyze *)",
+      "Bash(flutter test *)",
+      "Bash(flutter build *)",
+      "Bash(dart run *)",
+      "Bash(rm lib/views/onboarding/widgets/onboarding_page.dart)",
+      "Bash(rmdir lib/views/onboarding/widgets)",
+      "Bash(dart --version)",
+      "Bash(node -e ' *)"
+    ]
+  }
+}
